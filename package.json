@@ -1,0 +1,96 @@
+{
+  "name": "riotdoc-vscode",
+  "displayName": "RiotDoc",
+  "description": "AI-assisted document creation with context management",
+  "version": "0.1.0",
+  "publisher": "kjerneverk",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:riotdoc.yaml"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "riotdoc",
+          "title": "RiotDoc",
+          "icon": "$(book)"
+        }
+      ]
+    },
+    "views": {
+      "riotdoc": [
+        {
+          "id": "riotdoc.projects",
+          "name": "Projects"
+        },
+        {
+          "id": "riotdoc.voice",
+          "name": "Voice Profile"
+        },
+        {
+          "id": "riotdoc.guidance",
+          "name": "Guidance Sources"
+        },
+        {
+          "id": "riotdoc.assets",
+          "name": "Assets"
+        },
+        {
+          "id": "riotdoc.corpus",
+          "name": "Corpus"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "riotdoc.createProject",
+        "title": "RiotDoc: Create Project"
+      },
+      {
+        "command": "riotdoc.showVoice",
+        "title": "RiotDoc: Show Voice Profile"
+      },
+      {
+        "command": "riotdoc.addGuidance",
+        "title": "RiotDoc: Add Guidance Source"
+      },
+      {
+        "command": "riotdoc.registerAsset",
+        "title": "RiotDoc: Register Asset"
+      },
+      {
+        "command": "riotdoc.searchCorpus",
+        "title": "RiotDoc: Search Corpus"
+      },
+      {
+        "command": "riotdoc.assemblePrompt",
+        "title": "RiotDoc: Assemble Writing Context"
+      },
+      {
+        "command": "riotdoc.refresh",
+        "title": "RiotDoc: Refresh",
+        "icon": "$(refresh)"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  },
+  "dependencies": {
+    "yaml": "^2.8.0"
+  }
+}
