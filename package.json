@@ -81,14 +81,29 @@
     ]
   },
   "scripts": {
+    "clean": "rm -rf dist out",
     "build": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "precommit": "npm run build && npm run lint && npm run coverage",
+    "prepublishOnly": "npm run clean && npm run build",
+    "vscode:prepublish": "npm run build"
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.28.0",
     "@types/node": "^22.0.0",
-    "typescript": "^5.8.0"
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
+    "@vitest/coverage-v8": "^4.0.18",
+    "eslint": "^9.28.0",
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^17.0.0",
+    "typescript": "^5.8.0",
+    "vitest": "^4.0.18"
   },
   "dependencies": {
     "yaml": "^2.8.0"
