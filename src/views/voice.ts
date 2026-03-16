@@ -22,7 +22,7 @@ class VoiceLayerItem extends vscode.TreeItem {
         this.tooltip = `${LAYER_DESCRIPTIONS[layer]}\nSource: ${source}`;
         this.iconPath = new vscode.ThemeIcon(
             layer === "voice" ? "megaphone" :
-            layer === "tone" ? "paintcan" : "symbol-structure",
+                layer === "tone" ? "paintcan" : "symbol-structure",
         );
 
         if (filePath && fs.existsSync(filePath)) {
