@@ -107,5 +107,8 @@
   },
   "dependencies": {
     "yaml": "^2.8.0"
+  },
+  "publishConfig": {
+    "tag": "dev"
   }
 }

@@ -11,6 +11,5 @@ test/
 output/
 input/
 **/.DS_Store
-package-lock.json
 *.vsix
 .kodrdriv*
