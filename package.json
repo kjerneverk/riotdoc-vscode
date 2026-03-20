@@ -2,7 +2,7 @@
   "name": "riotdoc-vscode",
   "displayName": "RiotDoc",
   "description": "AI-assisted document creation with context management",
-  "version": "0.1.3-dev.0",
+  "version": "0.1.3",
   "publisher": "kjerneverk",
   "engines": {
     "vscode": "^1.85.0"
